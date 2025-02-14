@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>IP Address</th>
+                <th>System</th>
+                <th>Landscape</th>
+                <th>Description</th>
+                <th>OS</th>
+                <th>Location</th>
+                <th>Domain</th>
+                <th>Application</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result['Name'] }}</td>
+                <td>{{ result['IP'] }}</td>
+                <td>{{ result['System'] }}</td>
+                <td>{{ result['Landscape'] }}</td>
+                <td>{{ result['Description'] }}</td>
+                <td>{{ result['OS'] }}</td>
+                <td>{{ result['Location'] }}</td>
+                <td>{{ result['Domain'] }}</td>
+                <td>{{ result['Application'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
